@@ -61,7 +61,7 @@ This script is designed to persist UTM parameters across pages on a website. It 
    ```javascript
    var params = getUrlParams();
 
-   var utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+   var utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'fbclid', 'gclid'];
    var hasUtmParams = utmParams.some(function(param) {
      return params[param];
    });
