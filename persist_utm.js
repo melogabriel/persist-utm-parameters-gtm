@@ -29,7 +29,7 @@
     var params = getUrlParams();
 
     // Check for UTM parameters and persist them if they exist
-    var utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+    var utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'fbclid', 'gclid'];
     var hasUtmParams = utmParams.some(function(param) {
       return params[param];
     });
