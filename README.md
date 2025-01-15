@@ -1,5 +1,11 @@
 # UTM Parameters Persistence Script
 
+<div align="center">
+  <img src="https://img.shields.io/badge/Google%20Tag%20Manager-246FDB.svg?style=for-the-badge&logo=Google-Tag-Manager&logoColor=white" alt="Google Tag Manager" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+</div>
+
+---
 This script is designed to persist UTM parameters across pages on a website. It ensures that UTM parameters are retained and appended to the URL for tracking purposes, even if the user navigates to different pages without UTM parameters in the URL.
 
 ---
