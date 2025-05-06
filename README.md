@@ -1,11 +1,11 @@
-
-
-# Persist UTM Parameters with GTM
-
 <div align="center">
   <img src="https://img.shields.io/badge/Google%20Tag%20Manager-246FDB.svg?style=for-the-badge&logo=Google-Tag-Manager&logoColor=white" alt="Google Tag Manager" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
 </div>
+
+# Persist UTM Parameters with GTM
+
+
 
 ---
 To transfer UTM parameters, meaning to retain them across different pages and even sessions on your website, you can utilize cookies or local storage. This allows you to track the origin of a user's traffic even if they navigate to different parts of your site or revisit it later. You can achieve this using tools like Google Tag Manager (GTM) and custom HTML scripts.
