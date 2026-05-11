@@ -93,6 +93,22 @@ This script can be integrated into a Google Tag Manager (GTM) custom HTML tag fo
 
 OR
 
+Download the [GTM-import-file.json](https://github.com/melogabriel/persist-utm-parameters-gtm/releases/tag/V.1.0).
+
+Open your Google Tag Manager container.
+
+Go to Admin > Import Container.
+
+Select the downloaded JSON file.
+
+Choose a Workspace (New or Existing).
+
+Select Merge as the import option (to avoid deleting your existing tags) and choose Rename conflicting tags/triggers if necessary.
+
+Preview and Publish your changes.
+
+OR
+
 1. Copy the script to your project.
 2. Include the script in the `<head>` or `<body>` section of your HTML file:
 3. Test the script by navigating to a page with UTM parameters in the URL.
