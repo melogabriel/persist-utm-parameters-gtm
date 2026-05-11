@@ -1,0 +1,78 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2026-05-11 10:25:22",
+    "containerVersion": {
+        "path": "accounts/49969664/containers/1060028/versions/0",
+        "accountId": "49969664",
+        "containerId": "1060028",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/49969664/containers/1060028",
+            "accountId": "49969664",
+            "containerId": "1060028",
+            "name": "CLSBE Website",
+            "domainName": [
+                "//www.clsbe.lisboa.ucp.pt"
+            ],
+            "publicId": "GTM-MQSG5S",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1578397362131",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/49969664/containers/1060028/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-MQSG5S"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "49969664",
+                "containerId": "1060028",
+                "tagId": "523",
+                "name": "Custom HTML - Persist UTM",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n(function() {\n // Function to get URL parameters\n function getUrlParams() {\n   var params = {};\n   var queryString = window.location.search.substring(1);\n   if (queryString) {\n     var pairs = queryString.split('&');\n     for (var i = 0; i < pairs.length; i++) {\n       var pair = pairs[i].split('=');\n       var key = decodeURIComponent(pair[0]);\n       var value = pair[1] ? decodeURIComponent(pair[1].replace(/\\+/g, ' ')) : ''; // Handle + as space\n       params[key] = value;\n     }\n   }\n   return params;\n }\n\n // Function to set URL parameters with `+` for spaces\n function setUrlParams(params) {\n   var baseUrl = window.location.protocol + \"//\" + window.location.host + window.location.pathname;\n   var newUrl = baseUrl + '?' + Object.keys(params).map(function(key) {\n     return encodeURIComponent(key) + '=' + encodeURIComponent(params[key]).replace(/%20/g, '+'); // Replace %20 with +\n   }).join('&');\n   window.history.replaceState({ path: newUrl }, '', newUrl);\n }\n\n // Get current URL parameters\n var params = getUrlParams();\n\n // Check for UTM parameters and persist them if they exist\n var utmParams = ['utm_source',\n                  'utm_medium',\n                  'utm_campaign',\n                  'utm_term',\n                  'utm_content',\n                  'fbclid',\n                  'gclid'];\n var hasUtmParams = utmParams.some(function(param) {\n   return params[param];\n });\n\n if (hasUtmParams) {\n   // Store UTM parameters in sessionStorage\n   sessionStorage.setItem('utmParams', JSON.stringify(params));\n } else {\n   // Retrieve stored UTM parameters if available\n   var storedParams = sessionStorage.getItem('utmParams');\n   if (storedParams) {\n     var parsedParams = JSON.parse(storedParams);\n     Object.assign(params, parsedParams);\n     setUrlParams(params);\n   }\n }\n})();\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1778494274176",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "fingerprint": "1778495122091",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/49969664/containers/1060028/versions/0?apiLink=version"
+    }
+}
